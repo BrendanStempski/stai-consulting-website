@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What We Build — STAI Consulting</title>
+  <meta name="description" content="Custom-built tools for manufacturing shops and automation integrators. SOP platforms, inventory tracking, scheduling, and more — built for how your shop actually works.">
+  <meta name="author" content="STAI Consulting">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#0B1120',
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+              600: '#475569',
+            },
+            accent: {
+              DEFAULT: '#A855F7',
+              light: '#C084FC',
+              dark: '#9333EA',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { transition: none; opacity: 1; transform: none; }
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0B1120; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+    .mobile-menu.open { max-height: 400px; }
+  </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-navy-950/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+          <div class="w-8 h-8 bg-accent rounded flex items-center justify-center">
+            <svg class="w-5 h-5 text-navy-950" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13L2 9l4-4m12 12l4-4-4-4M14.5 3l-5 18" />
+            </svg>
+          </div>
+          <span class="text-lg font-semibold tracking-tight">STAI Consulting</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-slate-400">
+          <a href="index.html" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">Home</a>
+          <a href="index.html#hub" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">The HUB</a>
+          <a href="use-cases.html" class="text-slate-100 transition-colors duration-200 cursor-pointer">What We Build</a>
+          <a href="index.html#pricing" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">Pricing</a>
+          <a href="index.html#contact" class="inline-flex items-center px-4 py-2 bg-accent text-navy-950 font-medium rounded-lg hover:bg-accent-light transition-colors duration-200 cursor-pointer">Get in Touch</a>
+        </div>
+        <button id="mobile-toggle" class="md:hidden p-2 text-slate-400 hover:text-slate-100 cursor-pointer" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="py-4 flex flex-col gap-4 text-sm text-slate-400 border-t border-white/5">
+          <a href="index.html" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">Home</a>
+          <a href="index.html#hub" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">The HUB</a>
+          <a href="use-cases.html" class="text-slate-100 transition-colors duration-200 cursor-pointer">What We Build</a>
+          <a href="index.html#pricing" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">Pricing</a>
+          <a href="index.html#contact" class="inline-flex items-center justify-center px-4 py-2 bg-accent text-navy-950 font-medium rounded-lg hover:bg-accent-light transition-colors duration-200 cursor-pointer">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="pt-32 pb-16 sm:pt-40 sm:pb-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-accent transition-colors duration-200 cursor-pointer mb-8">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+        Back to home
+      </a>
+      <p class="text-sm font-semibold tracking-widest text-accent uppercase">What We Build</p>
+      <h1 class="mt-4 text-4xl sm:text-5xl font-800 leading-tight tracking-tight">
+        Real tools. Real problems.<br>
+        <span class="text-slate-400">Real results.</span>
+      </h1>
+      <p class="mt-6 text-lg text-slate-400 leading-relaxed max-w-2xl">
+        Every tool in the HUB ecosystem was born from a specific problem in a real shop. Here's what we've built, what we're building, and what each one replaces.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ TOOLS ============ -->
+  <section class="pb-20 sm:pb-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <!-- ===== SOP PLATFORM ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl font-bold">SOP Platform</h2>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                Live
+              </span>
+            </div>
+            <div class="prose prose-invert max-w-none">
+              <p class="text-slate-400 leading-relaxed">
+                A custom automation integrator was paying $10K+/year for documentation software that uses AI to generate user manuals. They build a lot of them. The tool worked — video in, step-by-step instructions out, clean documents in minutes. But at $10K/year, it wasn't worth it for a small shop.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                So we built the same thing. But better. Custom to their workflow, tied into their existing systems, easier for their team to use. Beautiful documents in minutes — same output, fraction of the cost.
+              </p>
+              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
+                One person. Less than a week. Now they pay next to nothing to keep it running.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
+            <div class="space-y-5">
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Video ingestion, auto-transcription, step-by-step instructions with images, approval workflows, viewer/editor/admin permissions, external client access portal</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
+                <p class="mt-1.5 text-sm text-slate-300">Less than 1 week</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
+                <p class="mt-1.5 text-sm text-slate-300">SOPLY, Dozuki, SwipeGuide</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">~$10,000+/year in subscription costs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STOCK KEEPING ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl font-bold">Stock Keeping</h2>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                Live
+              </span>
+            </div>
+            <div class="prose prose-invert max-w-none">
+              <p class="text-slate-400 leading-relaxed">
+                Parts were tracked in an Excel spreadsheet. A piece of paper taped to the stockroom door was the "system" — log items in and out with a pen. No matter how many reminders went out, nobody picked up the pen. Items went missing. Stock ran out without warning. Jobs got held up waiting on materials that should have been on the shelf.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                Instead of locking into expensive inventory software, we built a simple stock keeping app right into their HUB. Imported their old spreadsheet directly. Bought a cheap barcode scanner and integrated it into the app. Now instead of picking up a pen, they pull a trigger — scan the item in, scan it out. A pop-up confirms the transaction. Everyone actually uses it because it's faster than not using it.
+              </p>
+              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
+                One person. A few days. Problem solved.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                Then we took it a step further. Once the stock data was digital and accurate, we built an AI agent on top of it. When an item drops below its reorder threshold, the system automatically drafts a replenishment email to the supplier requesting a quote. When the quote comes back, the AI parses the response, logs the pricing, and flags it for approval. One click to confirm the order. No one has to check stock levels. No one has to remember to reorder. No one has to write an email. The system watches the shelves and handles it.
+              </p>
+              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
+                What started as a spreadsheet and a piece of paper is now a self-managing inventory system.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
+            <div class="space-y-5">
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Barcode scanner integration, bin-level tracking, item search, quantity logging, reorder threshold alerts, low-stock dashboard notifications, spreadsheet import, AI-powered auto-replenishment emails to suppliers, quote parsing and approval workflow</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
+                <p class="mt-1.5 text-sm text-slate-300">3 days (+ AI replenishment layer added after)</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
+                <p class="mt-1.5 text-sm text-slate-300">Spreadsheets, paper logs, Fishbowl, inFlow Inventory</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Hours of manual counting, eliminates surprise stockouts and missing materials</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TRIPLECAL ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl font-bold">TripleCAL</h2>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                Live
+              </span>
+            </div>
+            <div class="prose prose-invert max-w-none">
+              <p class="text-slate-400 leading-relaxed">
+                The owner needed a simple long-term planning calendar — who's assigned to what job, which projects are running when, where people need to be next week and next month. Not meetings. Not hourly scheduling. Just a clear, visual layout of who's doing what and when.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                He hated Outlook. Hated every calendar app he tried. They were all designed for meetings and appointments, not job assignments and project timelines. So he went back to an Excel sheet. But nobody knew when it changed. It lived on one computer. Updates got lost.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                So we built TripleCAL in a single day. A clean, simple long-term planning calendar built into their HUB. When anything changes, every employee gets notified automatically. And if they still want Outlook, they can import TripleCAL straight into it — both calendars stay synced.
+              </p>
+              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
+                Simple tool. Built in a day. Solved a problem the owner had been fighting for years.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
+            <div class="space-y-5">
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Long-term job/project calendar, drag-and-drop scheduling, automatic change notifications to employees, Outlook calendar import/sync, team-wide visibility</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
+                <p class="mt-1.5 text-sm text-slate-300">1 day</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
+                <p class="mt-1.5 text-sm text-slate-300">Excel scheduling sheets, Outlook (for this use case), whiteboards</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Eliminates confusion over schedule changes, everyone sees the same plan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== THE HUB DASHBOARD ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-accent/20 overflow-hidden">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl font-bold">The HUB Dashboard</h2>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">
+                <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
+                Live
+              </span>
+            </div>
+            <div class="prose prose-invert max-w-none">
+              <p class="text-slate-400 leading-relaxed">
+                Every tool above lives inside one dashboard. One login, one interface, shared data across every tool. The dashboard shows live stats — documents created, low stock alerts, upcoming schedule changes — all in one place. No tab switching, no separate logins, no copy-pasting between systems.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                And built into every HUB is a feedback box: "What did you do today that was time-consuming and could be done by a computer?" The team flags the problems. We build the solutions. The tool ecosystem grows based on real pain — not feature roadmaps written by people who've never set foot in your shop.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
+            <div class="space-y-5">
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Unified dashboard with live stats from all tools, single login, shared database, employee feedback/idea submission engine, custom branding per deployment</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
+                <p class="mt-1.5 text-sm text-slate-300">Ongoing — grows with every tool added</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Live — the foundation everything runs on</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ BOTTOM CTA ============ -->
+  <section class="py-20 sm:py-28 bg-navy-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold leading-tight">
+          These are just the ones we've built so far.
+        </h2>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+          Got a problem? If it can be built, we'll build it.
+        </p>
+        <a href="index.html#contact" class="mt-8 inline-flex items-center justify-center px-8 py-4 bg-accent text-navy-950 font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 text-lg cursor-pointer">
+          Tell Us What's Broken
+          <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="py-8 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-accent rounded flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-navy-950" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13L2 9l4-4m12 12l4-4-4-4M14.5 3l-5 18" />
+            </svg>
+          </div>
+          <span class="text-sm font-medium">STAI Consulting</span>
+        </div>
+        <p class="text-sm text-slate-600">&copy; 2025 STAI Consulting. Ontario, Canada.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const toggle = document.getElementById('mobile-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

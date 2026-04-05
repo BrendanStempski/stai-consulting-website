@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAI Consulting — Custom Software for Shops That Build Real Things</title>
+  <meta name="description" content="We replace expensive, bloated subscription software with custom-built tools that actually fit how your shop operates. One dashboard. All your tools. Built for you.">
+  <meta name="keywords" content="custom software, manufacturing tools, automation integrator software, shop management, HUB dashboard">
+  <meta name="author" content="STAI Consulting">
+  <meta property="og:title" content="STAI Consulting — Custom Software for Shops That Build Real Things">
+  <meta property="og:description" content="Replace $10K+/year software subscriptions with custom-built tools that cost less and work better.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#0B1120',
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+              600: '#475569',
+            },
+            accent: {
+              DEFAULT: '#A855F7',
+              light: '#C084FC',
+              dark: '#9333EA',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { transition: none; opacity: 1; transform: none; }
+    }
+
+    /* Subtle grid pattern for hero */
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0B1120; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+    /* Mobile menu */
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+    .mobile-menu.open { max-height: 400px; }
+  </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-navy-950/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2 cursor-pointer">
+          <div class="w-8 h-8 bg-accent rounded flex items-center justify-center">
+            <svg class="w-5 h-5 text-navy-950" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13L2 9l4-4m12 12l4-4-4-4M14.5 3l-5 18" />
+            </svg>
+          </div>
+          <span class="text-lg font-semibold tracking-tight">STAI Consulting</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-slate-400">
+          <a href="#problem" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">The Problem</a>
+          <a href="#hub" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">The HUB</a>
+          <a href="use-cases.html" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">What We Build</a>
+          <a href="#pricing" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">Pricing</a>
+          <a href="#contact" class="inline-flex items-center px-4 py-2 bg-accent text-navy-950 font-medium rounded-lg hover:bg-accent-light transition-colors duration-200 cursor-pointer">Get in Touch</a>
+        </div>
+        <button id="mobile-toggle" class="md:hidden p-2 text-slate-400 hover:text-slate-100 cursor-pointer" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="py-4 flex flex-col gap-4 text-sm text-slate-400 border-t border-white/5">
+          <a href="#problem" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">The Problem</a>
+          <a href="#hub" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">The HUB</a>
+          <a href="use-cases.html" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">What We Build</a>
+          <a href="#pricing" class="hover:text-slate-100 transition-colors duration-200 cursor-pointer">Pricing</a>
+          <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 bg-accent text-navy-950 font-medium rounded-lg hover:bg-accent-light transition-colors duration-200 cursor-pointer">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative min-h-screen flex items-center pt-16 grid-pattern">
+    <!-- Subtle gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-950 via-transparent to-navy-950 pointer-events-none"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-800 leading-[1.1] tracking-tight">
+            Custom software used to<br>cost six figures.
+            <span class="text-accent block mt-2">Now it costs less than your subscriptions.</span>
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-xl">
+            The subscription era is over. We build custom tools that replace your bloated software — one dashboard, one login, built around how your shop actually works. One-time fee. The tools are yours.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#hub" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-navy-950 font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 text-lg cursor-pointer">
+              See What We Build
+              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Dashboard screenshot -->
+        <div class="hidden lg:block">
+          <div class="relative">
+            <div class="bg-navy-900 rounded-xl border border-white/10 p-1 shadow-2xl overflow-hidden">
+              <!-- Browser chrome -->
+              <div class="flex items-center gap-2 px-4 py-3 border-b border-white/5">
+                <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+                <span class="ml-3 text-xs text-slate-500 font-mono">your-hub.staiconsulting.com</span>
+              </div>
+              <img src="triplehub-dashboard.png" alt="The HUB dashboard — unified tools for your shop" class="w-full h-auto block rounded-b-lg">
+            </div>
+            <!-- Glow effect behind mockup -->
+            <div class="absolute -inset-4 bg-accent/5 rounded-2xl blur-3xl -z-10"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE PROBLEM ============ -->
+  <section id="problem" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl">
+        <p class="text-sm font-semibold tracking-widest text-accent uppercase">The Problem</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+          You're paying $10K+ per year for software your team uses 20% of.
+        </h2>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+          The quoting tool doesn't talk to the stock system. The SOPs live in a binder nobody reads. Every tool has its own login, its own subscription, its own problems. Sound familiar?
+        </p>
+      </div>
+      <div class="mt-14 grid sm:grid-cols-3 gap-6">
+        <!-- Pain point 1 -->
+        <div class="reveal bg-navy-900 rounded-xl p-6 border border-white/5 hover:border-accent/20 transition-colors duration-200">
+          <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Bleeding money on subscriptions</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            $800/month for a quoting tool. $500/month for documentation. $300/month for inventory. It adds up to thousands — for software that wasn't built for your workflow.
+          </p>
+        </div>
+        <!-- Pain point 2 -->
+        <div class="reveal bg-navy-900 rounded-xl p-6 border border-white/5 hover:border-accent/20 transition-colors duration-200">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+            </svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Nothing talks to anything</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Your stock system doesn't feed into quoting. Your SOPs don't link to parts. Every tool is an island. Your team wastes hours copying data between systems.
+          </p>
+        </div>
+        <!-- Pain point 3 -->
+        <div class="reveal bg-navy-900 rounded-xl p-6 border border-white/5 hover:border-accent/20 transition-colors duration-200">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Built for someone else's workflow</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Off-the-shelf software was designed for the average company. You're not average. You need tools that match how your specific shop actually operates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE HUB ============ -->
+  <section id="hub" class="py-20 sm:py-28 bg-navy-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl">
+        <p class="text-sm font-semibold tracking-widest text-accent uppercase">The Solution</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+          One dashboard. All your tools.<br>Built for your shop.
+        </h2>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+          The HUB is a unified platform that hosts every tool your team needs — one login, one interface, one shared database. Every deployment is forked and customized for your specific workflow, branding, and operations. It's not one-size-fits-all. It's built for you.
+        </p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- SOP Platform — LIVE -->
+        <a href="use-cases.html" class="reveal bg-navy-900 rounded-xl p-6 border border-accent/20 relative group hover:border-accent/40 transition-colors duration-200 cursor-pointer block">
+          <div class="absolute top-4 right-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+              <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+              Live
+            </span>
+          </div>
+          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">SOP Platform</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Video in, step-by-step instructions out. Beautiful documents in minutes. Built in less than a week.
+          </p>
+          <p class="mt-3 text-xs text-accent font-medium">Replaces ~$10K+/yr in software</p>
+        </a>
+
+        <!-- Stock Keeping — LIVE -->
+        <a href="use-cases.html" class="reveal bg-navy-900 rounded-xl p-6 border border-accent/20 relative group hover:border-accent/40 transition-colors duration-200 cursor-pointer block">
+          <div class="absolute top-4 right-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+              <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+              Live
+            </span>
+          </div>
+          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+            </svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Stock Keeping</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Barcode scanner integration, AI-powered auto-replenishment, bin tracking. From spreadsheet to self-managing inventory in 3 days.
+          </p>
+          <p class="mt-3 text-xs text-accent font-medium">No more spreadsheet inventory</p>
+        </a>
+
+        <!-- TripleCAL — LIVE -->
+        <a href="use-cases.html" class="reveal bg-navy-900 rounded-xl p-6 border border-accent/20 relative group hover:border-accent/40 transition-colors duration-200 cursor-pointer block">
+          <div class="absolute top-4 right-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+              <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+              Live
+            </span>
+          </div>
+          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+            </svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">TripleCAL</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Long-term planning calendar with auto-notifications and Outlook sync. Built in a single day.
+          </p>
+          <p class="mt-3 text-xs text-accent font-medium">Replaced Excel scheduling sheets</p>
+        </a>
+      </div>
+
+      <div class="reveal mt-12 bg-navy-900 rounded-xl border border-white/5 p-6 sm:p-8">
+        <p class="text-lg text-slate-300 leading-relaxed">
+          <span class="text-accent font-semibold">Every deployment is custom.</span> Your HUB gets your branding, your tool selection, your configurations. It's not a template. It's software built around the way your specific shop operates.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl">
+        <p class="text-sm font-semibold tracking-widest text-accent uppercase">How It Works</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+          Start small. Grow when you're ready.
+        </h2>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+          No massive upfront commitment. No ripping out your existing systems overnight. We start with what hurts most and build from there.
+        </p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="reveal relative">
+          <div class="text-6xl font-800 text-accent/10 leading-none">01</div>
+          <h3 class="mt-3 text-lg font-semibold">Tell us what's broken</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            We learn your pain points, your workflow, and what software you're currently overpaying for.
+          </p>
+        </div>
+        <!-- Step 2 -->
+        <div class="reveal relative">
+          <div class="text-6xl font-800 text-accent/10 leading-none">02</div>
+          <h3 class="mt-3 text-lg font-semibold">We build your HUB</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Custom tools, your branding, your workflow logic. Every feature is built to match how your team actually works.
+          </p>
+        </div>
+        <!-- Step 3 -->
+        <div class="reveal relative">
+          <div class="text-6xl font-800 text-accent/10 leading-none">03</div>
+          <h3 class="mt-3 text-lg font-semibold">Deploy and train</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Live in your shop. Your team trained on it. Real support from people who understand your industry.
+          </p>
+        </div>
+        <!-- Step 4 -->
+        <div class="reveal relative">
+          <div class="text-6xl font-800 text-accent/10 leading-none">04</div>
+          <h3 class="mt-3 text-lg font-semibold">Grow over time</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+            Add tools as you need them. Your HUB evolves with your business — no big-bang migrations.
+          </p>
+        </div>
+      </div>
+
+      <!-- How we build it callout -->
+      <div class="reveal mt-14 bg-navy-900 rounded-xl border border-accent/10 p-6 sm:p-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-1 h-full bg-accent/40"></div>
+        <h3 class="text-lg sm:text-xl font-semibold text-slate-100 ml-4">How we build custom software for less than your current subscriptions</h3>
+        <p class="mt-3 text-slate-400 leading-relaxed ml-4">
+          Custom software used to take months and cost six figures. Not anymore. We use AI-assisted development tools that let us build in weeks what used to take a full team months. The software you get isn't AI — it's real, solid tools designed for your specific workflow. AI just lets us build it faster and cheaper. We pass those savings directly to you. That's how a one-time build fee replaces a $10K/year subscription.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUILT BY SOMEONE WHO GETS IT ============ -->
+  <section class="py-20 sm:py-28 bg-navy-900/50 relative overflow-hidden">
+    <!-- Subtle geometric background -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;><g fill=&quot;%23A855F7&quot; fill-opacity=&quot;1&quot;><path d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/></g></g></svg>');"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl mx-auto text-center">
+        <p class="text-sm font-semibold tracking-widest text-accent uppercase">Who Builds This</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+          Built on the shop floor.<br>Not in a boardroom.
+        </h2>
+        <div class="mt-8 text-lg text-slate-400 leading-relaxed space-y-4">
+          <p>
+            STAI Consulting was started by a robotics technician who programs cobots, machines fixtures, and debugs automation cells for a living. He saw the same problem in every shop he worked in: expensive software that didn't fit, manual processes that should be automated, and good operators wasting time on bad tools.
+          </p>
+          <p>
+            So he built something better. First for his own shop. Then for others.
+          </p>
+          <p class="text-slate-200 font-medium">
+            This isn't software designed by people who've never touched a machine. It's built by someone who lives your problems every day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="results" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl">
+        <p class="text-sm font-semibold tracking-widest text-accent uppercase">Real Results</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+          Don't take our word for it.
+        </h2>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="reveal bg-navy-900 rounded-xl p-6 border border-white/5">
+          <p class="text-slate-300 leading-relaxed">
+            "We were paying over $10K a year for documentation software that nobody on the floor actually used. The SOP platform they built us paid for itself in two months. The guys actually pull it up on the shop tablets now."
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5">
+            <p class="text-sm font-semibold text-slate-200">Mike Landry</p>
+            <p class="text-xs text-slate-500">Owner, Precision Cobot Systems</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="reveal bg-navy-900 rounded-xl p-6 border border-white/5">
+          <p class="text-slate-300 leading-relaxed">
+            "I was skeptical — we'd been burned by 'custom software' before. But this was different. It was built around how we actually work, not how someone assumed we work. Our stock tracking alone saves us hours every week."
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5">
+            <p class="text-sm font-semibold text-slate-200">Sarah Ouellet</p>
+            <p class="text-xs text-slate-500">Operations Manager, NorthForge Automation</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="reveal bg-navy-900 rounded-xl p-6 border border-white/5">
+          <p class="text-slate-300 leading-relaxed">
+            "From first conversation to live deployment was about three weeks. I've waited longer for a vendor to return a quote. The tool works, the team uses it, and the monthly cost is nothing compared to what we were paying."
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5">
+            <p class="text-sm font-semibold text-slate-200">Dave Carruthers</p>
+            <p class="text-xs text-slate-500">GM, Apex Integration Group</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="reveal mt-8 text-xs text-slate-600 text-center">Client testimonials coming soon — placeholder content shown.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="py-20 sm:py-28 bg-navy-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl">
+        <p class="text-sm font-semibold tracking-widest text-accent uppercase">Pricing</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+          One-time fee. The tools are yours. Forever.
+        </h2>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+          No recurring license fees that climb every year. A one-time build + small monthly for hosting. Compare that to the <span class="text-red-400 font-semibold">$10K+ per year</span> you're spending now on software that doesn't fit. Once you see what's possible, you'll wonder why you waited.
+        </p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Starter HUB -->
+        <div class="reveal bg-navy-950 rounded-xl border border-white/5 p-6 sm:p-8 flex flex-col">
+          <p class="text-sm font-semibold text-accent uppercase tracking-wider">Starter HUB</p>
+          <div class="mt-4">
+            <span class="text-3xl font-bold">$3,000</span>
+            <span class="text-slate-500 text-sm ml-1">one-time</span>
+          </div>
+          <p class="text-slate-400 text-sm mt-1">+ $200/month hosting &amp; maintenance</p>
+          <div class="mt-6 h-px bg-white/5"></div>
+          <ul class="mt-6 space-y-3 flex-1">
+            <li class="text-sm text-slate-400 leading-relaxed">1 custom tool (e.g., SOP Platform or Stock Keeping)</li>
+            <li class="text-sm text-slate-400 leading-relaxed">Your branding and configuration</li>
+            <li class="text-sm text-slate-400 leading-relaxed">Hosting and maintenance included</li>
+            <li class="text-sm text-slate-400 leading-relaxed">Team onboarding</li>
+          </ul>
+          <a href="#contact" class="mt-8 inline-flex items-center justify-center px-6 py-3 border border-accent/30 text-accent font-medium rounded-lg hover:bg-accent/10 transition-colors duration-200 cursor-pointer">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Growth HUB -->
+        <div class="reveal bg-navy-950 rounded-xl border border-accent/30 p-6 sm:p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-6">
+            <span class="px-3 py-1 bg-accent text-navy-950 text-xs font-semibold rounded-full">Most Popular</span>
+          </div>
+          <p class="text-sm font-semibold text-accent uppercase tracking-wider">Growth HUB</p>
+          <div class="mt-4">
+            <span class="text-3xl font-bold">$5,000</span>
+            <span class="text-slate-500 text-sm ml-1">one-time</span>
+          </div>
+          <p class="text-slate-400 text-sm mt-1">+ $350/month hosting &amp; maintenance</p>
+          <div class="mt-6 h-px bg-white/5"></div>
+          <ul class="mt-6 space-y-3 flex-1">
+            <li class="text-sm text-slate-300 leading-relaxed">2-3 custom tools with shared database</li>
+            <li class="text-sm text-slate-300 leading-relaxed">Full HUB dashboard with stats</li>
+            <li class="text-sm text-slate-300 leading-relaxed">Built-in team feedback engine</li>
+            <li class="text-sm text-slate-300 leading-relaxed">Priority support</li>
+          </ul>
+          <a href="#contact" class="mt-8 inline-flex items-center justify-center px-6 py-3 bg-accent text-navy-950 font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 cursor-pointer">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Full HUB -->
+        <div class="reveal bg-navy-950 rounded-xl border border-white/5 p-6 sm:p-8 flex flex-col">
+          <p class="text-sm font-semibold text-accent uppercase tracking-wider">Full HUB</p>
+          <div class="mt-4">
+            <span class="text-3xl font-bold">$8,000</span>
+            <span class="text-slate-500 text-sm ml-1">one-time</span>
+          </div>
+          <p class="text-slate-400 text-sm mt-1">+ $500/month hosting &amp; maintenance</p>
+          <div class="mt-6 h-px bg-white/5"></div>
+          <ul class="mt-6 space-y-3 flex-1">
+            <li class="text-sm text-slate-400 leading-relaxed">4+ tools, full ecosystem</li>
+            <li class="text-sm text-slate-400 leading-relaxed">Cross-tool data integration</li>
+            <li class="text-sm text-slate-400 leading-relaxed">Custom reporting and alerts</li>
+            <li class="text-sm text-slate-400 leading-relaxed">Ongoing tool development</li>
+          </ul>
+          <a href="#contact" class="mt-8 inline-flex items-center justify-center px-6 py-3 border border-accent/30 text-accent font-medium rounded-lg hover:bg-accent/10 transition-colors duration-200 cursor-pointer">
+            Get Started
+          </a>
+        </div>
+      </div>
+
+      <p class="reveal mt-10 text-sm text-slate-500 leading-relaxed max-w-3xl">
+        Every project is scoped to your needs. These are starting points, not fixed packages. Let's talk about what makes sense for your shop.
+      </p>
+
+      <!-- Cost comparison callout -->
+      <div class="reveal mt-10 bg-navy-950 rounded-xl border border-red-500/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+        <div class="flex-shrink-0">
+          <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <p class="text-slate-300 leading-relaxed">
+            <span class="text-red-400 font-semibold">Your current software: $10K+ per year.</span> Your HUB: a fraction of the cost, built specifically for you, and it actually gets used. Most clients break even within the first year — then it's pure savings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEEDBACK ENGINE ============ -->
+  <section class="py-20 sm:py-28 bg-navy-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-2xl mb-6">
+          <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold leading-tight">
+          Your tools get better because your team tells us how.
+        </h2>
+        <p class="mt-6 text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          Every HUB has a built-in feedback tool. Your team sees something that wastes their time — they flag it. We build the fix. Your tool ecosystem evolves based on real problems, not feature roadmaps written by people who've never set foot in your shop.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div class="reveal">
+          <p class="text-sm font-semibold tracking-widest text-accent uppercase">Get Started</p>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
+            Let's talk about what's costing you time and money.
+          </h2>
+          <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+            No sales pitch. No demo of features you don't need. Just a conversation about what's broken in your shop and whether we can build something better.
+          </p>
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center gap-3 text-slate-400">
+              <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <a href="mailto:hello@staiconsulting.com" class="hover:text-accent transition-colors duration-200 cursor-pointer">hello@staiconsulting.com</a>
+            </div>
+            <div class="flex items-center gap-3 text-slate-400">
+              <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              <span>Ontario, Canada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <form class="space-y-5" onsubmit="return false;">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-300 mb-1.5">Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-3 bg-navy-900 border border-white/10 rounded-lg text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-colors duration-200"
+                placeholder="Your name">
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-slate-300 mb-1.5">Company</label>
+              <input type="text" id="company" name="company"
+                class="w-full px-4 py-3 bg-navy-900 border border-white/10 rounded-lg text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-colors duration-200"
+                placeholder="Your company name">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-slate-300 mb-1.5">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 bg-navy-900 border border-white/10 rounded-lg text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-colors duration-200"
+                placeholder="you@company.com">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-slate-300 mb-1.5">What software do you hate?</label>
+              <textarea id="message" name="message" rows="4"
+                class="w-full px-4 py-3 bg-navy-900 border border-white/10 rounded-lg text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-colors duration-200 resize-none"
+                placeholder="Tell us what's wasting your time and money..."></textarea>
+            </div>
+            <button type="submit"
+              class="w-full px-8 py-4 bg-accent text-navy-950 font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 text-lg cursor-pointer">
+              Let's Talk
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="py-8 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-accent rounded flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-navy-950" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13L2 9l4-4m12 12l4-4-4-4M14.5 3l-5 18" />
+            </svg>
+          </div>
+          <span class="text-sm font-medium">STAI Consulting</span>
+        </div>
+        <p class="text-sm text-slate-600">&copy; 2025 STAI Consulting. Ontario, Canada.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobile-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+
+    // Close mobile menu on link click
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.remove('open'));
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 100;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('text-slate-100');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('text-slate-100');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
