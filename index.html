@@ -112,45 +112,229 @@
 
   <!-- ============ HERO ============ -->
   <section class="relative min-h-screen flex items-center pt-16 grid-pattern">
-    <!-- Subtle gradient overlay -->
     <div class="absolute inset-0 bg-gradient-to-b from-navy-950 via-transparent to-navy-950 pointer-events-none"></div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         <div>
+          <!-- Kicker -->
+          <p class="text-sm font-semibold text-red-400 leading-relaxed max-w-lg mb-6">The average small business spends thousands every year on software subscriptions their team barely uses. That era is ending.</p>
+          <!-- Headline -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-800 leading-[1.1] tracking-tight">
-            Custom software used to<br>cost six figures.
-            <span class="text-accent block mt-2">Now it costs less than your subscriptions.</span>
-            <span class="text-slate-500 block mt-3 text-2xl sm:text-3xl font-medium">Don't go. <span class="text-accent">STAI.</span></span>
+            Your shop deserves software that was<br><span class="text-accent">built for it.</span>
           </h1>
+          <!-- Subhead -->
           <p class="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-xl">
-            The subscription era is over. We build custom tools that replace your bloated software — one dashboard, one login, built around how your shop actually works. One-time fee. The tools are yours.
+            AI made building software 10x faster and 10x cheaper. We use that to do two things no SaaS company ever will — replace your overpriced subscriptions with tools you own, and build custom solutions for problems no off-the-shelf product was ever designed to solve.
           </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="#hub" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-navy-950 font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 text-lg cursor-pointer">
-              See What We Build
-              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
+          <!-- Two pillar cards -->
+          <div class="mt-8 grid sm:grid-cols-2 gap-4">
+            <div class="bg-navy-900 border border-red-500/20 rounded-xl p-5">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-7 h-7 bg-red-500/10 rounded-lg flex items-center justify-center">
+                  <svg class="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                </div>
+                <span class="text-sm font-bold text-red-400">Kill the subscriptions</span>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed">You're paying monthly for tools built for someone else's workflow. We rebuild them — around YOUR process — for a one-time fee. Same functionality. Your branding. No monthly ransom.</p>
+              <p class="mt-3 text-xs text-slate-500">SOPs, inventory, scheduling, quoting — tools that replace $500–$800/mo subscriptions</p>
+            </div>
+            <div class="bg-navy-900 border border-emerald-500/20 rounded-xl p-5">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-7 h-7 bg-emerald-500/10 rounded-lg flex items-center justify-center">
+                  <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <span class="text-sm font-bold text-emerald-400">Build what doesn't exist</span>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed">That bottleneck your team works around every day? The manual process that wastes hours? No SaaS company will ever build a product for that. It's too niche. But we can — in days.</p>
+              <p class="mt-3 text-xs text-slate-500">Custom automation, workflow tools, and integrations built for your specific operation</p>
+            </div>
+          </div>
+          <!-- Proof bar -->
+          <div class="mt-8 grid grid-cols-4 gap-px bg-white/5 rounded-xl overflow-hidden">
+            <div class="bg-navy-900 px-4 py-4 text-center">
+              <p class="text-lg font-bold text-accent">Days</p>
+              <p class="text-xs text-slate-500 mt-1">not months to build</p>
+            </div>
+            <div class="bg-navy-900 px-4 py-4 text-center">
+              <p class="text-lg font-bold text-accent">One-time</p>
+              <p class="text-xs text-slate-500 mt-1">build fee, not annual</p>
+            </div>
+            <div class="bg-navy-900 px-4 py-4 text-center">
+              <p class="text-lg font-bold text-accent">Yours</p>
+              <p class="text-xs text-slate-500 mt-1">own the tools forever</p>
+            </div>
+            <div class="bg-navy-900 px-4 py-4 text-center">
+              <p class="text-lg font-bold text-accent">Custom</p>
+              <p class="text-xs text-slate-500 mt-1">built for your workflow</p>
+            </div>
+          </div>
+          <!-- CTAs -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 text-lg cursor-pointer">Tell us what's broken</a>
+            <a href="#use-cases" class="inline-flex items-center justify-center px-8 py-4 border border-accent/30 text-accent font-semibold rounded-lg hover:bg-accent/10 transition-colors duration-200 text-lg cursor-pointer">See what we build</a>
           </div>
         </div>
         <!-- Dashboard screenshot -->
-        <div class="hidden lg:block">
+        <div class="hidden lg:block sticky top-24">
           <div class="relative">
             <div class="bg-navy-900 rounded-xl border border-white/10 p-1 shadow-2xl overflow-hidden">
-              <!-- Browser chrome -->
               <div class="flex items-center gap-2 px-4 py-3 border-b border-white/5">
                 <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
                 <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
                 <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
                 <span class="ml-3 text-xs text-slate-500 font-mono">your-hub.staihub.ca</span>
               </div>
-              <img src="triplehub-dashboard.png" alt="The HUB dashboard — unified tools for your shop" class="w-full h-auto block rounded-b-lg">
+              <img src="triplehub-dashboard.png" alt="The HUB dashboard" class="w-full h-auto block rounded-b-lg">
             </div>
-            <!-- Glow effect behind mockup -->
             <div class="absolute -inset-4 bg-accent/5 rounded-2xl blur-3xl -z-10"></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ USE CASES ============ -->
+  <section id="use-cases" class="py-20 sm:py-28 bg-navy-900/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-3xl">
+        <p class="text-sm font-semibold tracking-widest text-accent uppercase">What We Do</p>
+        <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">What we replace. What we build.</h2>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">From subscription killers to workflow tools that don't exist anywhere else — here's what we build and what it replaces.</p>
+      </div>
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- UC1: Social Media -->
+        <div class="reveal bg-navy-900 rounded-xl border border-white/5 p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-base font-semibold">Social Media Management</h3>
+            <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-red-500/15 text-red-400">Subscription killer</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Schedule posts, manage multiple platforms, track engagement, auto-generate content calendars.</p>
+          <div class="grid grid-cols-2 gap-2 mt-auto">
+            <div class="bg-red-950/30 rounded-lg p-3">
+              <p class="text-xs text-red-400 font-semibold mb-1">What you pay now</p>
+              <p class="text-sm font-bold text-white">$500–$2,000/mo</p>
+              <p class="text-xs text-slate-500 mt-1">Hootsuite, Sprout, agency fees</p>
+            </div>
+            <div class="bg-emerald-950/30 rounded-lg p-3">
+              <p class="text-xs text-emerald-400 font-semibold mb-1">What we build</p>
+              <p class="text-sm font-bold text-white">$3K one-time</p>
+              <p class="text-xs text-slate-500 mt-1">Custom tool. Yours forever.</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs text-slate-500">Break-even in 2–6 months. After that, pure savings.</p>
+        </div>
+
+        <!-- UC2: Inventory -->
+        <div class="reveal bg-navy-900 rounded-xl border border-white/5 p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-base font-semibold">Inventory & Stock Keeping</h3>
+            <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-red-500/15 text-red-400">Subscription killer</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Barcode scanning, bin tracking, low-stock alerts, auto-replenishment, multi-location support.</p>
+          <div class="grid grid-cols-2 gap-2 mt-auto">
+            <div class="bg-red-950/30 rounded-lg p-3">
+              <p class="text-xs text-red-400 font-semibold mb-1">What you pay now</p>
+              <p class="text-sm font-bold text-white">$175–$500/mo</p>
+              <p class="text-xs text-slate-500 mt-1">Fishbowl, Sortly, Zoho</p>
+            </div>
+            <div class="bg-emerald-950/30 rounded-lg p-3">
+              <p class="text-xs text-emerald-400 font-semibold mb-1">What we build</p>
+              <p class="text-sm font-bold text-white">$3K one-time</p>
+              <p class="text-xs text-slate-500 mt-1">Built for YOUR bins and parts.</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs text-slate-500">43% of small businesses don't track inventory — usually because software is too expensive or complex.</p>
+        </div>
+
+        <!-- UC3: SOP -->
+        <div class="reveal bg-navy-900 rounded-xl border border-white/5 p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-base font-semibold">SOP & Documentation</h3>
+            <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-red-500/15 text-red-400">Subscription killer</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Upload a video, get step-by-step instructions. Beautiful docs in minutes, not hours.</p>
+          <div class="grid grid-cols-2 gap-2 mt-auto">
+            <div class="bg-red-950/30 rounded-lg p-3">
+              <p class="text-xs text-red-400 font-semibold mb-1">What you pay now</p>
+              <p class="text-sm font-bold text-white">$500–$800/mo</p>
+              <p class="text-xs text-slate-500 mt-1">Dozuki, SwipeGuide, Poka</p>
+            </div>
+            <div class="bg-emerald-950/30 rounded-lg p-3">
+              <p class="text-xs text-emerald-400 font-semibold mb-1">What we build</p>
+              <p class="text-sm font-bold text-white">$3K one-time</p>
+              <p class="text-xs text-slate-500 mt-1">Already live. Already proven.</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs text-slate-500">This is the tool that started S.T.A.I. — built because the $10K/yr alternative was overkill.</p>
+        </div>
+
+        <!-- UC4: Invoice -->
+        <div class="reveal bg-navy-900 rounded-xl border border-blue-500/10 p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-base font-semibold">Invoice Builder & Automation</h3>
+            <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-400">Workflow builder</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Auto-populate from job data, generate PDFs, send to clients. No more Excel templates.</p>
+          <div class="grid grid-cols-2 gap-2 mt-auto">
+            <div class="bg-red-950/30 rounded-lg p-3">
+              <p class="text-xs text-red-400 font-semibold mb-1">Current reality</p>
+              <p class="text-sm font-bold text-white">12 min/invoice</p>
+              <p class="text-xs text-slate-500 mt-1">20 hrs/mo at 100 invoices</p>
+            </div>
+            <div class="bg-emerald-950/30 rounded-lg p-3">
+              <p class="text-xs text-emerald-400 font-semibold mb-1">What we build</p>
+              <p class="text-sm font-bold text-white">1–2 min/invoice</p>
+              <p class="text-xs text-slate-500 mt-1">80% time reduction.</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs text-slate-500">No SaaS product knows your job structure. We build one that does.</p>
+        </div>
+
+        <!-- UC5: Scheduling -->
+        <div class="reveal bg-navy-900 rounded-xl border border-blue-500/10 p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-base font-semibold">Scheduling & Resource Planning</h3>
+            <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-400">Workflow builder</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Long-term planning calendar, auto-notifications, Outlook sync, full team visibility.</p>
+          <div class="grid grid-cols-2 gap-2 mt-auto">
+            <div class="bg-red-950/30 rounded-lg p-3">
+              <p class="text-xs text-red-400 font-semibold mb-1">Current reality</p>
+              <p class="text-sm font-bold text-white">Excel sheets</p>
+              <p class="text-xs text-slate-500 mt-1">Conflicts, no alerts, hours lost</p>
+            </div>
+            <div class="bg-emerald-950/30 rounded-lg p-3">
+              <p class="text-xs text-emerald-400 font-semibold mb-1">What we build</p>
+              <p class="text-sm font-bold text-white">Built in 1 day</p>
+              <p class="text-xs text-slate-500 mt-1">Live calendar, alerts, Outlook sync</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs text-slate-500">Sometimes the problem isn't expensive software — it's NO software. Just a broken spreadsheet everyone's afraid to touch.</p>
+        </div>
+
+        <!-- UC6: Your bottleneck CTA -->
+        <div class="reveal bg-navy-900 rounded-xl border border-accent/30 p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-base font-semibold">Your Specific Bottleneck</h3>
+            <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-500/15 text-blue-400">Workflow builder</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">That thing your team works around every day. The process that wastes hours. The data that lives in someone's head.</p>
+          <div class="grid grid-cols-2 gap-2 mt-auto">
+            <div class="bg-red-950/30 rounded-lg p-3">
+              <p class="text-xs text-red-400 font-semibold mb-1">The cost</p>
+              <p class="text-sm font-bold text-white">Invisible</p>
+              <p class="text-xs text-slate-500 mt-1">Buried in wasted time and workarounds</p>
+            </div>
+            <div class="bg-emerald-950/30 rounded-lg p-3">
+              <p class="text-xs text-emerald-400 font-semibold mb-1">What we do</p>
+              <p class="text-sm font-bold text-white">Tell us the problem</p>
+              <p class="text-xs text-slate-500 mt-1">We scope it, build it, deploy it.</p>
+            </div>
+          </div>
+          <a href="#contact" class="mt-4 inline-flex items-center justify-center px-4 py-2 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 cursor-pointer">Start the conversation →</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -381,7 +565,7 @@
       <div class="reveal max-w-3xl">
         <p class="text-sm font-semibold tracking-widest text-accent uppercase">Real Results</p>
         <h2 class="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
-          Don't take our word for it. <span class="text-accent">STAI</span> a while.
+          Don't take our word for it.
         </h2>
       </div>
 
@@ -605,6 +789,19 @@
           </form>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="py-16 bg-navy-900/50 border-t border-white/5">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm font-semibold tracking-widest text-accent uppercase mb-2">Newsletter</p>
+      <h2 class="text-2xl sm:text-3xl font-bold"><span class="text-accent">STAI</span> in the loop.</h2>
+      <p class="mt-3 text-slate-400 text-sm">Occasional updates on what we're building, tools we're shipping, and things we think are worth knowing. No fluff.</p>
+      <form class="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return false;">
+        <input type="email" placeholder="you@company.com" class="flex-1 px-4 py-3 bg-navy-900 border border-white/10 rounded-lg text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-colors duration-200" />
+        <button type="submit" class="px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 cursor-pointer whitespace-nowrap">STAI in control</button>
+      </form>
     </div>
   </section>
 
