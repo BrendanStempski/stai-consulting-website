@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What We Build — STAI Hub</title>
-  <meta name="description" content="Custom modules for small and medium-sized businesses. Documentation, inventory, scheduling, project management, time tracking — built for how your business actually works.">
+  <title>What We Build — STAI Hub for Robotic Integrators</title>
+  <meta name="description" content="Custom modules built for robotic integrators. Cycle-time estimation, cell quoting, parts tracking, install SOPs, scheduling, per-cell profit — built for how integration shops actually work.">
   <meta name="author" content="STAI Hub">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,11 +102,11 @@
       </a>
       <p class="text-sm font-semibold tracking-widest text-accent uppercase">What We Build</p>
       <h1 class="mt-4 text-4xl sm:text-5xl font-800 leading-tight tracking-tight">
-        Real tools. Real problems.<br>
-        <span class="text-slate-400">Real results.</span>
+        Real tools.<br>
+        <span class="text-slate-400">Real problems in real integration shops.</span>
       </h1>
       <p class="mt-6 text-lg text-slate-400 leading-relaxed max-w-2xl">
-        Every module in the HUB was born from a specific problem in a real business. Here's what each module does, what it replaces, and how fast it went from idea to live.
+        Every module in the HUB was born from a specific problem in a real robotic integrator. Here's what each one does, what it replaces in your current stack, and how fast it went from idea to live.
       </p>
     </div>
   </section>
@@ -115,58 +115,15 @@
   <section class="pb-20 sm:pb-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
-      <!-- ===== SOP ===== -->
-      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
-        <div class="grid lg:grid-cols-5">
-          <div class="lg:col-span-3 p-6 sm:p-8">
-            <div class="flex items-center gap-3 mb-4">
-              <h2 class="text-2xl font-bold">SOP</h2>
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
-                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-                Live
-              </span>
-            </div>
-            <div class="prose prose-invert max-w-none">
-              <p class="text-slate-400 leading-relaxed">
-                A small business was paying over $10K/year for documentation software that used AI to generate written work instructions from video. The tool worked — video in, step-by-step instructions out, clean documents in minutes. But at that price, it wasn't justifiable for the handful of people who actually used it.
-              </p>
-              <p class="text-slate-400 leading-relaxed mt-3">
-                So we built the same thing, better — custom to their workflow, tied into their existing systems, easier for their team to use. Beautiful documents in minutes. Same output, fraction of the cost, and no more annual renewal fees.
-              </p>
-              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
-                One person. Less than a week. Now they own the tool outright.
-              </p>
-            </div>
-          </div>
-          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
-            <div class="space-y-5">
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
-                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Video ingestion, auto-transcription, step-by-step instructions with images, approval workflows, viewer/editor/admin permissions, external access portal</p>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
-                <p class="mt-1.5 text-sm text-slate-300">Less than 1 week</p>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
-                <p class="mt-1.5 text-sm text-slate-300">Dozuki, SwipeGuide, Poka, and similar documentation platforms</p>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
-                <p class="mt-1.5 text-sm text-accent font-medium">~$10,000+/year in subscription costs</p>
-              </div>
-            </div>
-          </div>
+      <!-- ===== TACTIME (niche flagship) ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-accent/30 overflow-hidden relative">
+        <div class="absolute top-4 right-4 z-10">
+          <span class="px-2.5 py-1 bg-accent/15 text-accent text-[10px] font-semibold tracking-wider rounded-full uppercase">Integrator flagship</span>
         </div>
-      </div>
-
-      <!-- ===== STOCK ===== -->
-      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
         <div class="grid lg:grid-cols-5">
           <div class="lg:col-span-3 p-6 sm:p-8">
             <div class="flex items-center gap-3 mb-4">
-              <h2 class="text-2xl font-bold">STOCK</h2>
+              <h2 class="text-2xl font-bold">TACTIME</h2>
               <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
                 <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
                 Live
@@ -174,16 +131,13 @@
             </div>
             <div class="prose prose-invert max-w-none">
               <p class="text-slate-400 leading-relaxed">
-                Parts were tracked in an Excel spreadsheet. A piece of paper taped to the stockroom door was the "system" — log items in and out with a pen. No matter how many reminders went out, nobody picked up the pen. Items went missing. Stock ran out without warning. Projects got held up waiting on materials that should have been on the shelf.
+                Customers want a cycle time on every proposal. Estimating it properly means modelling the cell — robot, EOAT, pick/place poses, dwell times — and most shops don't have hours to spend on something that may not win. So they eyeball it, pad it, and hope. Sometimes that's the difference between winning the job and bleeding on it.
               </p>
               <p class="text-slate-400 leading-relaxed mt-3">
-                Instead of locking into expensive inventory software, we built a simple stock tracking module right into their HUB. Imported the old spreadsheet directly. Integrated a cheap barcode scanner. Now scan in, scan out — a pop-up confirms the transaction. Everyone uses it because it's faster than not using it.
-              </p>
-              <p class="text-slate-400 leading-relaxed mt-3">
-                Then we added an AI layer on top. When an item drops below its reorder threshold, the system drafts a replenishment email to the supplier requesting a quote. When the quote comes back, the AI parses it, logs the pricing, and flags it for approval. One click to confirm the order. No one has to check stock levels or remember to reorder.
+                TACTIME flips that. Upload the customer's DXF, set a handful of cell parameters, and the module returns a realistic cycle-time estimate in seconds — not in someone's head. Export a branded PDF report straight to the customer, or link the estimate to a JOBS quote so the cell cost and the cycle time live on the same record.
               </p>
               <p class="text-slate-300 leading-relaxed mt-3 font-medium">
-                A spreadsheet and a piece of paper turned into a self-managing inventory system.
+                Turns guess-and-pad into a number you can actually put on a quote.
               </p>
             </div>
           </div>
@@ -191,68 +145,15 @@
             <div class="space-y-5">
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
-                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Barcode scanner integration, bin-level tracking, item search, quantity logging, reorder threshold alerts, low-stock dashboard notifications, spreadsheet import, AI-powered auto-replenishment emails to suppliers, quote parsing and approval workflow</p>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
-                <p class="mt-1.5 text-sm text-slate-300">3 days (+ AI replenishment layer added after)</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">DXF upload, parametric cell modelling, cycle-time estimation, branded PDF reports, JOBS quote linking, revision history per estimate</p>
               </div>
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
-                <p class="mt-1.5 text-sm text-slate-300">Spreadsheets, paper logs, Fishbowl, inFlow, Sortly, Zoho Inventory</p>
+                <p class="mt-1.5 text-sm text-slate-300">Cycle-time spreadsheets, whiteboard math, "I'll get back to you Monday"</p>
               </div>
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
-                <p class="mt-1.5 text-sm text-accent font-medium">Hours of manual counting, eliminates surprise stockouts</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== CAL ===== -->
-      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
-        <div class="grid lg:grid-cols-5">
-          <div class="lg:col-span-3 p-6 sm:p-8">
-            <div class="flex items-center gap-3 mb-4">
-              <h2 class="text-2xl font-bold">CAL</h2>
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
-                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-                Live
-              </span>
-            </div>
-            <div class="prose prose-invert max-w-none">
-              <p class="text-slate-400 leading-relaxed">
-                The owner needed a long-term planning calendar — who's assigned to what project, which work is running when, where people need to be next week and next month. Not meetings. Not hourly scheduling. Just a clear, visual layout of who's doing what and when.
-              </p>
-              <p class="text-slate-400 leading-relaxed mt-3">
-                Every calendar app he tried was designed for meetings, not work assignments. So he went back to an Excel sheet. But nobody knew when it changed, and updates got lost.
-              </p>
-              <p class="text-slate-400 leading-relaxed mt-3">
-                We built CAL in a single day. A clean, visual long-term planning calendar inside the HUB. When anything changes, every employee gets notified automatically. And if they still want Outlook, they can sync it — both calendars stay in step.
-              </p>
-              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
-                Built in a day. Solved a problem the owner had been fighting for years.
-              </p>
-            </div>
-          </div>
-          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
-            <div class="space-y-5">
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
-                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Long-term project calendar, drag-and-drop scheduling, automatic change notifications to employees, Outlook calendar import/sync, team-wide visibility</p>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
-                <p class="mt-1.5 text-sm text-slate-300">1 day</p>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
-                <p class="mt-1.5 text-sm text-slate-300">Excel scheduling sheets, whiteboards, generic calendar apps</p>
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
-                <p class="mt-1.5 text-sm text-accent font-medium">Eliminates confusion over schedule changes; everyone sees the same plan</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Hours per quote; lets you respond same-day with a defensible number</p>
               </div>
             </div>
           </div>
@@ -272,13 +173,13 @@
             </div>
             <div class="prose prose-invert max-w-none">
               <p class="text-slate-400 leading-relaxed">
-                Clients, projects, quotes, expenses, and profitability — usually scattered across a CRM, a quoting tool, a spreadsheet, and an accountant's inbox. JOBS pulls it into one place.
+                Clients, cells, quotes, purchase orders, invoices, expenses, and profitability — in most integration shops, that's a CRM, a quoting tool, a spreadsheet, and the bookkeeper's QuickBooks file. JOBS pulls it into one place, organised around the unit of work that matters: the cell.
               </p>
               <p class="text-slate-400 leading-relaxed mt-3">
-                Every project has its own record. Quotes are built inline with an embedded builder and exported as branded PDFs. Expenses get attached directly to the project they belong to. Labour hours (from TIMESHEET) roll up automatically. At any point you can see the profit on a project — not just the top-line revenue.
+                Every cell has its own record. Quotes are built inline with an embedded line-item builder and exported as branded PDFs. POs to your robot and EOAT suppliers attach directly to the cell they belong to. Invoices and payments roll up. Labour hours (from TIMESHEET) flow in automatically. At any point you can see the live margin on the cell — not just the top-line revenue.
               </p>
               <p class="text-slate-300 leading-relaxed mt-3 font-medium">
-                Replaces three tools with one, and answers the question every owner actually cares about: are we making money on this?
+                Replaces four tools with one, and answers the question every shop owner cares about: are we making money on this cell?
               </p>
             </div>
           </div>
@@ -286,15 +187,159 @@
             <div class="space-y-5">
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
-                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Client records, project tracking, embedded quote builder with PDF preview, expense capture, labour roll-up from TIMESHEET, per-project profit tracking, company contact settings</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Client records, per-cell project tracking, embedded quote builder with PDF preview, purchase orders, invoices &amp; payments, expense capture, labour roll-up from TIMESHEET, live per-cell profit</p>
               </div>
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
-                <p class="mt-1.5 text-sm text-slate-300">CRM + quoting tool + project tracker + expense tracker</p>
+                <p class="mt-1.5 text-sm text-slate-300">Generic CRM + quoting tool + project tracker + expense spreadsheet</p>
               </div>
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
-                <p class="mt-1.5 text-sm text-accent font-medium">Hours per week on admin; visibility into project margins</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Hours per week on admin; real visibility into per-cell margin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STOCK ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl font-bold">STOCK</h2>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                Live
+              </span>
+            </div>
+            <div class="prose prose-invert max-w-none">
+              <p class="text-slate-400 leading-relaxed">
+                Robot parts, sensors, EOAT components, pneumatics, electrical, fasteners — tracked in an Excel spreadsheet, with a piece of paper taped to the stockroom door as the "system." No matter how many reminders went out, nobody picked up the pen. Items went missing. Stock ran out without warning. Cells got held up waiting on materials that should have been on the shelf.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                Instead of locking the shop into expensive inventory software, we built a stock tracking module right into the HUB. Imported the old spreadsheet directly. Integrated a cheap barcode scanner. Scan in, scan out — pop-up confirms the transaction. Everyone uses it because it's faster than not using it.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                Then we added an AI layer on top. When a part drops below its reorder threshold, the system drafts a replenishment email to the supplier requesting a quote. When the quote comes back, AI parses it, logs the pricing, and flags it for approval. One click confirms the order. No one has to check stock levels or remember to reorder.
+              </p>
+              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
+                A spreadsheet and a piece of paper turned into a self-managing parts crib.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
+            <div class="space-y-5">
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Barcode scanner integration, bin-level tracking, part search, reorder thresholds, low-stock alerts, spreadsheet import, AI-drafted supplier replenishment, quote parsing and approval workflow</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
+                <p class="mt-1.5 text-sm text-slate-300">3 days (+ AI replenishment layer added after)</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
+                <p class="mt-1.5 text-sm text-slate-300">Spreadsheets, paper logs, Fishbowl, inFlow, Sortly, Zoho Inventory</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Hours of manual counting; eliminates the cells held up waiting on parts that "should have been here"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SOP ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl font-bold">SOP</h2>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                Live
+              </span>
+            </div>
+            <div class="prose prose-invert max-w-none">
+              <p class="text-slate-400 leading-relaxed">
+                Every cell ships with documentation — install steps, commissioning checklists, operator instructions, maintenance procedures. Most shops pay over $10K/year for documentation software that uses AI to generate written work instructions from video. The tools work — video in, step-by-step instructions out, clean documents in minutes. But at that price, it's hard to justify for the handful of techs who actually use it.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                So we built the same thing, better — custom to the shop's workflow, tied into their existing systems, branded for the customer the cell is shipping to. Beautiful documents in minutes. Same output, fraction of the cost, no annual renewal fees.
+              </p>
+              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
+                One person. Less than a week. Now the shop owns the tool outright.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
+            <div class="space-y-5">
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Video ingestion, auto-transcription, step-by-step instructions with images, approval workflows, viewer/editor/admin permissions, external customer access portal</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
+                <p class="mt-1.5 text-sm text-slate-300">Less than 1 week</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
+                <p class="mt-1.5 text-sm text-slate-300">Dozuki, SwipeGuide, Poka, and similar documentation platforms</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">~$10,000+/year in subscription costs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== CAL ===== -->
+      <div class="reveal bg-navy-900 rounded-xl border border-white/5 overflow-hidden">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <h2 class="text-2xl font-bold">CAL</h2>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-400 text-xs font-medium rounded-full">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                Live
+              </span>
+            </div>
+            <div class="prose prose-invert max-w-none">
+              <p class="text-slate-400 leading-relaxed">
+                The shop owner needed a long-term planning calendar — which tech is on which cell, when installs are happening, where the service crew needs to be next week and next month. Not meetings. Not hourly scheduling. Just a clear, visual layout of who's doing what and when across builds, installs, and commissioning.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                Every calendar app on the market is designed for meetings, not work assignments. So he went back to an Excel sheet. But nobody knew when it changed, and updates got lost.
+              </p>
+              <p class="text-slate-400 leading-relaxed mt-3">
+                We built CAL in a single day. A clean, visual long-term planning calendar inside the HUB, colour-coded by cell. When anything changes, every employee gets notified automatically. And if a tech still wants Outlook, they can sync it — both calendars stay in step.
+              </p>
+              <p class="text-slate-300 leading-relaxed mt-3 font-medium">
+                Built in a day. Solved a problem the owner had been fighting for years.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 bg-navy-800/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-white/5">
+            <div class="space-y-5">
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Long-term project calendar, drag-and-drop scheduling, automatic change notifications, Outlook sync, team-wide visibility, colour-coded per cell</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
+                <p class="mt-1.5 text-sm text-slate-300">1 day</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
+                <p class="mt-1.5 text-sm text-slate-300">Excel scheduling sheets, whiteboards, generic calendar apps</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Eliminates confusion over schedule changes; the whole shop sees the same plan</p>
               </div>
             </div>
           </div>
@@ -314,7 +359,7 @@
             </div>
             <div class="prose prose-invert max-w-none">
               <p class="text-slate-400 leading-relaxed">
-                Time and labour tracking that doesn't feel like a second job. Employees log hours against projects in a clean weekly view. Approvals take seconds. Cost data flows straight into JOBS so profit numbers are always current.
+                Time and labour tracking that doesn't feel like a second job. Techs log hours against the cell they're on — not against a generic "project code" — in a clean weekly view. Approvals take seconds. Labour cost flows straight into JOBS so per-cell profit numbers are always current.
               </p>
               <p class="text-slate-300 leading-relaxed mt-3 font-medium">
                 No separate payroll subscription. No CSV exports. Hours in, profit updated.
@@ -325,7 +370,7 @@
             <div class="space-y-5">
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
-                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Weekly timesheet entry, project-level time allocation, manager approvals, labour cost roll-up to JOBS</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Weekly timesheet entry, hours against the cell, manager approvals, labour cost roll-up to JOBS</p>
               </div>
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Replaces</p>
@@ -333,7 +378,7 @@
               </div>
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Saves</p>
-                <p class="mt-1.5 text-sm text-accent font-medium">Eliminates duplicate entry between time tracking and project costing</p>
+                <p class="mt-1.5 text-sm text-accent font-medium">Eliminates duplicate entry between time tracking and per-cell costing</p>
               </div>
             </div>
           </div>
@@ -353,10 +398,10 @@
             </div>
             <div class="prose prose-invert max-w-none">
               <p class="text-slate-400 leading-relaxed">
-                A spatial command center for organizing work across your entire business. Think of it as the thinking layer that sits on top of the other modules — a place to plan, dump ideas, connect the dots, and keep the team aligned on what matters this week.
+                A spatial command center for everything in flight — proposals, active builds, commissioning, support tickets, ideas for the next cell. Think of it as the thinking layer that sits on top of the other modules — a place to plan, dump ideas, connect the dots, and keep the shop aligned on what matters this week.
               </p>
               <p class="text-slate-300 leading-relaxed mt-3 font-medium">
-                Less a tool, more a workspace. The kind of thing every business has in someone's head — finally in one place.
+                Less a tool, more a workspace. The kind of thing every shop has in someone's head — finally in one place.
               </p>
             </div>
           </div>
@@ -392,10 +437,10 @@
             </div>
             <div class="prose prose-invert max-w-none">
               <p class="text-slate-400 leading-relaxed">
-                Every module above lives inside one dashboard. One login, one interface, shared data across every module. The dashboard shows live stats — documents created, low stock alerts, upcoming schedule changes, open projects — all in one place. No tab switching, no separate logins, no copy-pasting between systems.
+                Every module above lives inside one dashboard. One login, one interface, shared data across every module. The dashboard shows live stats — quotes out, cells in build, low stock alerts, upcoming installs, open cells with margin — all in one place. No tab switching, no separate logins, no copy-pasting between systems.
               </p>
               <p class="text-slate-400 leading-relaxed mt-3">
-                And built into every HUB is a feedback box: what did you do today that wasted your time? The team flags the problems. We build the fixes. Your HUB evolves based on real pain — not feature roadmaps written by people who've never worked in your business.
+                And built into every HUB is a feedback box: what did you do today that wasted your time? The shop flags the problems. We build the fixes. Your HUB evolves based on real integrator pain — not feature roadmaps written by people who've never walked a cell install.
               </p>
             </div>
           </div>
@@ -403,7 +448,7 @@
             <div class="space-y-5">
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Features</p>
-                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Unified dashboard with live stats from all modules, single login, shared database, team feedback engine, custom branding per deployment</p>
+                <p class="mt-1.5 text-sm text-slate-300 leading-relaxed">Unified dashboard with live stats from all modules, single login, shared database, team feedback engine, custom branding per shop</p>
               </div>
               <div>
                 <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Built in</p>
@@ -429,10 +474,10 @@
           These are just the modules we've built so far.
         </h2>
         <p class="mt-4 text-lg text-slate-400 leading-relaxed">
-          Got a problem that no off-the-shelf tool solves? If it can be built, we'll build it — usually in days.
+          Got an integrator workflow problem that no off-the-shelf tool solves? If it can be built, we'll build it — usually in days.
         </p>
         <a href="https://tally.so/r/441V8X" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-light transition-colors duration-200 text-lg cursor-pointer">
-          Tell us what's broken
+          Tell us what's broken in your shop
           <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
@@ -448,7 +493,7 @@
         <div class="flex items-center gap-2">
           <img src="stai-logo.svg" alt="S.T.A.I." class="h-7 w-auto" />
         </div>
-        <p class="text-sm text-slate-600">&copy; 2026 STAI Hub. Ontario, Canada.</p>
+        <p class="text-sm text-slate-600">&copy; 2026 STAI Hub. Built for robotic integrators. Ontario, Canada.</p>
       </div>
     </div>
   </footer>
